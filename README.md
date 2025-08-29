@@ -50,7 +50,7 @@ npm install @porsche-design-system/components-vue@3.29.0
 
 ### Step 4
 
-Wrap your app with the `<PorscheDesignSystemProvider />`.
+Wrap your application with the `<PorscheDesignSystemProvider />` component, then integrate the Porsche Design System components you need.
 
 ```vue
 // src/App.vue
