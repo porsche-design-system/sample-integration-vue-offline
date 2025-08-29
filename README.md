@@ -16,7 +16,7 @@ With the upcoming version 4 of the Porsche Design System, a new solution will be
 
 ### Step 1
 
-Copy the `./@porsche-design-system` folder and its contents from this repository into the **root directory** of your Vue project.
+Copy the `./@porsche-design-system` folder and its contents from this repository into the **root directory** of **your** [Vue](https://vuejs.org/guide/quick-start.html) project.
 
 ### Step 2
 
