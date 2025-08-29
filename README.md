@@ -2,7 +2,7 @@
 
 ## About
 
-This repository demonstrates how to integrate the Porsche Design System with *Vue** using a specialized offline build.
+This repository demonstrates how to integrate the Porsche Design System with **Vue** using a specialized offline build.
 This is particularly useful for applications that need to function without an internet connection.
 
 A custom offline build of the Porsche Design System `v3.29.0` npm package is located in `./@porsche-design-system/components-{js|vue}`. 
