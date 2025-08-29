@@ -1,4 +1,4 @@
-# Porsche Design System for Vue (Offline Build)
+# Porsche Design System for Vue (Offline Build v3.29.0)
 
 ## About
 
