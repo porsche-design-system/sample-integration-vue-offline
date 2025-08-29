@@ -50,7 +50,9 @@ npm install @porsche-design-system/components-vue@3.29.0
 
 ### Step 4
 
-Wrap your application with the `<PorscheDesignSystemProvider />`, then integrate the Porsche Design System components you need.
+Wrap your application with the `<PorscheDesignSystemProvider />`, then integrate the Porsche Design System components you need. 
+
+For additional information on how to integrate Partials and Tailwind CSS, you can also refer to the [Getting Started](https://designsystem.porsche.com/v3/developing/vue/getting-started) section of the official documentation.
 
 ```vue
 // src/App.vue
