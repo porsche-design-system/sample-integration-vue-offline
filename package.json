@@ -12,6 +12,7 @@
     "copy:@porsche-design-system/components-js": "rm -rf ./node_modules/@porsche-design-system/components-js && cp -r ./@porsche-design-system/components-js/. ./node_modules/@porsche-design-system/components-js",
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
+    "build:ci": "PUBLIC_BASE_PATH=/sample-integration-vue-offline npm run build",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "playwright test",

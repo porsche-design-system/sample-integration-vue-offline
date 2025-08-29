@@ -10,6 +10,7 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['@porsche-design-system/components-vue', '@porsche-design-system/components-js'],
   },
+  base: process.env.PUBLIC_BASE_PATH || '',
   plugins: [
     vue(),
     vueJsx(),
