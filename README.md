@@ -40,7 +40,27 @@ Extend the **scripts** section of your `package.json` file.
 }
 ```
 
-### Step 3
+### Step 4
+
+Exclude Porsche Design System from Vite's cache.
+
+```
+// vite.config.ts
+
+export default defineConfig({
+  optimizeDeps: {
+    exclude: ['@porsche-design-system/components-vue', '@porsche-design-system/components-js'],
+  },
+  plugins: [
+    vue(),
+    vueJsx(),
+    vueDevTools(),
+  ],
+  …
+})
+```
+
+### Step 5
 
 Add the `@porsche-design-system/components-vue` npm package with version `3.29.0`.
 
@@ -48,13 +68,13 @@ Add the `@porsche-design-system/components-vue` npm package with version `3.29.0
 npm install @porsche-design-system/components-vue@3.29.0
 ```
 
-### Step 4
+### Step 6
 
 Wrap your application with the `<PorscheDesignSystemProvider />`, then integrate the Porsche Design System components you need. 
 
 For additional information on how to integrate Partials and Tailwind CSS, you can also refer to the [Getting Started](https://designsystem.porsche.com/v3/developing/vue/getting-started) section of the official documentation.
 
-```vue
+```
 // src/App.vue
 
 <script setup lang="ts">
@@ -77,7 +97,7 @@ For additional information on how to integrate Partials and Tailwind CSS, you ca
 </style>
 ```
 
-### Step 5
+### Step 7
 
 Once the web application is built and served, open your browser's developer console. 
 All Porsche Design System assets should then be loaded from `${YOUR_BASE_URL}`.

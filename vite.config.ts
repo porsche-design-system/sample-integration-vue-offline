@@ -7,6 +7,9 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  optimizeDeps: {
+    exclude: ['@porsche-design-system/components-vue', '@porsche-design-system/components-js'],
+  },
   plugins: [
     vue(),
     vueJsx(),
