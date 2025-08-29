@@ -1,0 +1,1 @@
+"use strict";const e=require("vue"),o=require("../../utils.cjs"),r=e.defineComponent({__name:"TableBodyWrapper",setup(s){const t=o.usePrefix("p-table-body");return(n,u)=>(e.openBlock(),e.createBlock(e.resolveDynamicComponent(e.unref(t)),null,{default:e.withCtx(()=>[e.renderSlot(n.$slots,"default")]),_:3}))}});module.exports=r;

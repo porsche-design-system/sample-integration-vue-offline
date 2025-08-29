@@ -1,0 +1,1 @@
+"use strict";const e=require("vue"),r=require("../../utils.cjs"),o=e.defineComponent({__name:"TableHeadWrapper",setup(s){const t=r.usePrefix("p-table-head");return(n,a)=>(e.openBlock(),e.createBlock(e.resolveDynamicComponent(e.unref(t)),null,{default:e.withCtx(()=>[e.renderSlot(n.$slots,"default")]),_:3}))}});module.exports=o;

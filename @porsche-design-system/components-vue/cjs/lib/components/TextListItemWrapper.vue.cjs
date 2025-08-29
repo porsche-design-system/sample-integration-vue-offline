@@ -1,0 +1,1 @@
+"use strict";const e=require("vue"),r=require("../../utils.cjs"),o=e.defineComponent({__name:"TextListItemWrapper",setup(s){const t=r.usePrefix("p-text-list-item");return(n,u)=>(e.openBlock(),e.createBlock(e.resolveDynamicComponent(e.unref(t)),null,{default:e.withCtx(()=>[e.renderSlot(n.$slots,"default")]),_:3}))}});module.exports=o;

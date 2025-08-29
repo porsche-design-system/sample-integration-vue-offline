@@ -1,0 +1,1 @@
+"use strict";const e=require("vue"),o=require("../../utils.cjs"),r=e.defineComponent({__name:"TableHeadRowWrapper",setup(s){const t=o.usePrefix("p-table-head-row");return(n,a)=>(e.openBlock(),e.createBlock(e.resolveDynamicComponent(e.unref(t)),null,{default:e.withCtx(()=>[e.renderSlot(n.$slots,"default")]),_:3}))}});module.exports=r;
