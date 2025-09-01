@@ -19,7 +19,11 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "npm:outdated": "npm outdated",
+    "npm:upgrade": "npx npm-check-updates -u && npm install",
+    "npm:remove": "find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \\;",
+    "npm:clean": "npm cache clean --force"
   },
   "dependencies": {
     "@porsche-design-system/components-vue": "^3.29.0",
