@@ -1,10 +1,10 @@
-import { defineComponent as p, ref as f, inject as l, onMounted as m, onUpdated as i, watch as d, openBlock as u, createBlock as h, resolveDynamicComponent as _, unref as y, withCtx as C, renderSlot as k } from "vue";
-import { usePrefix as w, themeInjectionKey as x, syncProperties as a } from "../../utils.mjs";
-const S = /* @__PURE__ */ p({
+import { defineComponent as s, ref as f, inject as l, onMounted as m, onUpdated as i, watch as d, createBlock as u, openBlock as h, resolveDynamicComponent as _, unref as y, withCtx as C, renderSlot as k } from "vue";
+import { usePrefix as B, themeInjectionKey as b, syncProperties as a } from "../../utils.mjs";
+const P = /* @__PURE__ */ s({
   __name: "LinkSocialWrapper",
   props: {
     compact: { type: Boolean, default: !1 },
-    hideLabel: { default: !1 },
+    hideLabel: { type: [Boolean, Object], default: !1 },
     href: {},
     icon: {},
     iconSource: {},
@@ -13,10 +13,10 @@ const S = /* @__PURE__ */ p({
     theme: {}
   },
   setup(c) {
-    const s = w("p-link-social"), e = c, t = f(), n = l(x), r = () => a(t, { ...e, theme: e.theme || n.value });
+    const p = B("p-link-social"), e = c, t = f(), n = l(b), r = () => a(t, { ...e, theme: e.theme || n.value });
     return m(r), i(r), d(n, (o) => {
       a(t, { theme: e.theme || o });
-    }), (o, B) => (u(), h(_(y(s)), {
+    }), (o, j) => (h(), u(_(y(p)), {
       ref_key: "pdsComponentRef",
       ref: t
     }, {
@@ -28,5 +28,5 @@ const S = /* @__PURE__ */ p({
   }
 });
 export {
-  S as default
+  P as default
 };

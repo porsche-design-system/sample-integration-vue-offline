@@ -1,4 +1,4 @@
-import { defineComponent as a, ref as i, onMounted as p, onUpdated as d, openBlock as l, createBlock as f, resolveDynamicComponent as c, unref as u, withCtx as m, renderSlot as g } from "vue";
+import { defineComponent as a, ref as i, onMounted as p, onUpdated as d, createBlock as l, openBlock as f, resolveDynamicComponent as c, unref as u, withCtx as m, renderSlot as g } from "vue";
 import { usePrefix as _, syncProperties as h } from "../../utils.mjs";
 const x = /* @__PURE__ */ a({
   __name: "LinkTileModelSignatureWrapper",
@@ -13,7 +13,7 @@ const x = /* @__PURE__ */ a({
   },
   setup(t) {
     const n = _("p-link-tile-model-signature"), r = t, e = i(), o = () => h(e, r);
-    return p(o), d(o), (s, k) => (l(), f(c(u(n)), {
+    return p(o), d(o), (s, k) => (f(), l(c(u(n)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

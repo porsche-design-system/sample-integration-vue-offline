@@ -25,11 +25,12 @@ type PMarqueProps = {
      */
     variant?: MarqueVariant;
 };
-/** @deprecated since v3.0.0, will be removed with next major release. Please use "p-wordmark" instead. */
-declare const _default: import("vue").DefineComponent<PMarqueProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PMarqueProps> & Readonly<{}>, {
+declare const __VLS_export: import("vue").DefineComponent<PMarqueProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PMarqueProps> & Readonly<{}>, {
     size: MarqueSize;
     target: MarqueTarget;
     variant: MarqueVariant;
     trademark: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+/** @deprecated since v3.0.0, will be removed with next major release. Please use "p-wordmark" instead. */
+declare const _default: typeof __VLS_export;
 export default _default;

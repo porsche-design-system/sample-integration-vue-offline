@@ -1,6 +1,6 @@
-import { defineComponent as u, ref as f, inject as c, onMounted as m, onUpdated as h, watch as g, openBlock as C, createBlock as y, resolveDynamicComponent as _, unref as w, withCtx as B, renderSlot as P } from "vue";
-import { usePrefix as k, themeInjectionKey as x, addEventListenerToElementRef as l, syncProperties as i } from "../../utils.mjs";
-const b = /* @__PURE__ */ u({
+import { defineComponent as u, ref as c, inject as f, onMounted as m, onUpdated as h, watch as g, createBlock as C, openBlock as y, resolveDynamicComponent as B, unref as _, withCtx as w, renderSlot as P } from "vue";
+import { usePrefix as b, themeInjectionKey as k, syncProperties as l, addEventListenerToElementRef as i } from "../../utils.mjs";
+const v = /* @__PURE__ */ u({
   __name: "CarouselWrapper",
   props: {
     activeSlideIndex: { default: 0 },
@@ -8,13 +8,13 @@ const b = /* @__PURE__ */ u({
     alignHeader: { default: "start" },
     aria: {},
     description: {},
-    disablePagination: {},
+    disablePagination: { type: [Boolean, Object] },
     focusOnCenterSlide: { type: Boolean, default: !1 },
     gradientColor: { default: "none" },
     heading: {},
     headingSize: { default: "x-large" },
     intl: {},
-    pagination: { default: !0 },
+    pagination: { type: [Boolean, Object], default: !0 },
     rewind: { type: Boolean, default: !0 },
     skipLinkTarget: {},
     slidesPerPage: { default: 1 },
@@ -25,16 +25,16 @@ const b = /* @__PURE__ */ u({
   },
   emits: ["carouselChange", "update"],
   setup(s, { emit: d }) {
-    const p = k("p-carousel"), t = s, e = f(), a = d, o = c(x), r = () => i(e, { ...t, theme: t.theme || o.value });
+    const p = b("p-carousel"), t = s, e = c(), o = d, a = f(k), r = () => l(e, { ...t, theme: t.theme || a.value });
     return m(() => {
-      r(), l(e, "carouselChange", a), l(e, "update", a);
-    }), h(r), g(o, (n) => {
-      i(e, { theme: t.theme || n });
-    }), (n, S) => (C(), y(_(w(p)), {
+      r(), i(e, "carouselChange", o), i(e, "update", o);
+    }), h(r), g(a, (n) => {
+      l(e, { theme: t.theme || n });
+    }), (n, x) => (y(), C(B(_(p)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {
-      default: B(() => [
+      default: w(() => [
         P(n.$slots, "default")
       ]),
       _: 3
@@ -42,5 +42,5 @@ const b = /* @__PURE__ */ u({
   }
 });
 export {
-  b as default
+  v as default
 };

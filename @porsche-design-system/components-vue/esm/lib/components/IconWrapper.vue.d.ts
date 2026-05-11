@@ -30,9 +30,10 @@ type PIconProps = {
      */
     theme?: Theme;
 };
-declare const _default: import("vue").DefineComponent<PIconProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PIconProps> & Readonly<{}>, {
+declare const __VLS_export: import("vue").DefineComponent<PIconProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PIconProps> & Readonly<{}>, {
     size: IconSize;
     name: IconName;
     color: IconColor;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

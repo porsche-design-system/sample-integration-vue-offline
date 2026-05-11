@@ -1,12 +1,12 @@
-import { defineComponent as s, ref as c, inject as l, onMounted as m, onUpdated as d, watch as i, openBlock as u, createBlock as h, resolveDynamicComponent as _, unref as y, withCtx as C, renderSlot as k } from "vue";
-import { usePrefix as w, themeInjectionKey as v, syncProperties as a } from "../../utils.mjs";
-const b = /* @__PURE__ */ s({
+import { defineComponent as f, ref as s, inject as l, onMounted as m, onUpdated as d, watch as i, createBlock as u, openBlock as h, resolveDynamicComponent as y, unref as _, withCtx as C, renderSlot as k } from "vue";
+import { usePrefix as b, themeInjectionKey as j, syncProperties as a } from "../../utils.mjs";
+const x = /* @__PURE__ */ f({
   __name: "LinkWrapper",
   props: {
     aria: {},
-    compact: { default: !1 },
+    compact: { type: [Boolean, Object], default: !1 },
     download: {},
-    hideLabel: { default: !1 },
+    hideLabel: { type: [Boolean, Object], default: !1 },
     href: {},
     icon: { default: "none" },
     iconSource: {},
@@ -15,11 +15,11 @@ const b = /* @__PURE__ */ s({
     theme: {},
     variant: { default: "primary" }
   },
-  setup(f) {
-    const p = w("p-link"), e = f, t = c(), n = l(v), r = () => a(t, { ...e, theme: e.theme || n.value });
+  setup(p) {
+    const c = b("p-link"), e = p, t = s(), n = l(j), r = () => a(t, { ...e, theme: e.theme || n.value });
     return m(r), d(r), i(n, (o) => {
       a(t, { theme: e.theme || o });
-    }), (o, x) => (u(), h(_(y(p)), {
+    }), (o, w) => (h(), u(y(_(c)), {
       ref_key: "pdsComponentRef",
       ref: t
     }, {
@@ -31,5 +31,5 @@ const b = /* @__PURE__ */ s({
   }
 });
 export {
-  b as default
+  x as default
 };

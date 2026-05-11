@@ -1,4 +1,4 @@
-import { defineComponent as s, ref as a, onMounted as l, onUpdated as f, openBlock as d, createBlock as c, resolveDynamicComponent as i, unref as m, withCtx as u, renderSlot as _ } from "vue";
+import { defineComponent as s, ref as a, onMounted as l, onUpdated as f, createBlock as d, openBlock as c, resolveDynamicComponent as i, unref as m, withCtx as u, renderSlot as _ } from "vue";
 import { usePrefix as C, syncProperties as k } from "../../utils.mjs";
 const x = /* @__PURE__ */ s({
   __name: "DrilldownLinkWrapper",
@@ -12,7 +12,7 @@ const x = /* @__PURE__ */ s({
   },
   setup(n) {
     const t = C("p-drilldown-link"), r = n, e = a(), o = () => k(e, r);
-    return l(o), f(o), (p, w) => (d(), c(i(m(t)), {
+    return l(o), f(o), (p, w) => (c(), d(i(m(t)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

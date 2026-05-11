@@ -1,9 +1,9 @@
-import { defineComponent as f, ref as c, inject as l, onMounted as m, onUpdated as d, watch as u, openBlock as h, createBlock as i, resolveDynamicComponent as C, unref as _, withCtx as y, renderSlot as b } from "vue";
+import { defineComponent as c, ref as f, inject as l, onMounted as m, onUpdated as d, watch as u, createBlock as h, openBlock as i, resolveDynamicComponent as y, unref as C, withCtx as _, renderSlot as b } from "vue";
 import { usePrefix as k, themeInjectionKey as x, syncProperties as r } from "../../utils.mjs";
-const P = /* @__PURE__ */ f({
+const j = /* @__PURE__ */ c({
   __name: "CheckboxWrapperWrapper",
   props: {
-    hideLabel: { default: !1 },
+    hideLabel: { type: [Boolean, Object], default: !1 },
     label: { default: "" },
     loading: { type: Boolean, default: !1 },
     message: { default: "" },
@@ -11,14 +11,14 @@ const P = /* @__PURE__ */ f({
     theme: {}
   },
   setup(p) {
-    const s = k("p-checkbox-wrapper"), e = p, t = c(), n = l(x), a = () => r(t, { ...e, theme: e.theme || n.value });
+    const s = k("p-checkbox-wrapper"), e = p, t = f(), n = l(x), a = () => r(t, { ...e, theme: e.theme || n.value });
     return m(a), d(a), u(n, (o) => {
       r(t, { theme: e.theme || o });
-    }), (o, w) => (h(), i(C(_(s)), {
+    }), (o, w) => (i(), h(y(C(s)), {
       ref_key: "pdsComponentRef",
       ref: t
     }, {
-      default: y(() => [
+      default: _(() => [
         b(o.$slots, "default")
       ]),
       _: 3
@@ -26,5 +26,5 @@ const P = /* @__PURE__ */ f({
   }
 });
 export {
-  P as default
+  j as default
 };

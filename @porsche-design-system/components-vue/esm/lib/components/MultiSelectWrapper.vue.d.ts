@@ -57,10 +57,10 @@ declare var __VLS_8: {};
 type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_8) => any;
 };
-declare const __VLS_component: import("vue").DefineComponent<PMultiSelectProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
-    update: (value: import("../types").MultiSelectUpdateEvent) => any;
+declare const __VLS_base: import("vue").DefineComponent<PMultiSelectProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
+    [x: string]: any;
 }, string, import("vue").PublicProps, Readonly<PMultiSelectProps> & Readonly<{
-    onUpdate?: ((value: import("../types").MultiSelectUpdateEvent) => any) | undefined;
+    [x: `on${Capitalize<any>}`]: ((...args: any) => any) | undefined;
 }>, {
     label: string;
     compact: boolean;
@@ -73,7 +73,8 @@ declare const __VLS_component: import("vue").DefineComponent<PMultiSelectProps, 
     message: string;
     dropdownDirection: MultiSelectDropdownDirection;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
-declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
+declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
+declare const _default: typeof __VLS_export;
 export default _default;
 type __VLS_WithSlots<T, S> = T & {
     new (): {

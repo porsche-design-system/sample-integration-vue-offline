@@ -1,4 +1,4 @@
-import { defineComponent as s, ref as a, onMounted as f, onUpdated as d, openBlock as c, createBlock as m, resolveDynamicComponent as u, unref as i, withCtx as l, renderSlot as _ } from "vue";
+import { defineComponent as s, ref as a, onMounted as f, onUpdated as d, createBlock as c, openBlock as m, resolveDynamicComponent as u, unref as i, withCtx as l, renderSlot as _ } from "vue";
 import { usePrefix as C, syncProperties as w } from "../../utils.mjs";
 const x = /* @__PURE__ */ s({
   __name: "GridWrapper",
@@ -9,7 +9,7 @@ const x = /* @__PURE__ */ s({
   },
   setup(t) {
     const r = C("p-grid"), n = t, e = a(), o = () => w(e, n);
-    return f(o), d(o), (p, y) => (c(), m(u(i(r)), {
+    return f(o), d(o), (p, y) => (m(), c(u(i(r)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

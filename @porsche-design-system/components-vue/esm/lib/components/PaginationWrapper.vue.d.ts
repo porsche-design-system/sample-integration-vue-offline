@@ -46,7 +46,7 @@ type PPaginationProps = {
      */
     totalItemsCount: number;
 };
-declare const _default: import("vue").DefineComponent<PPaginationProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
+declare const __VLS_export: import("vue").DefineComponent<PPaginationProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
     update: (value: import("../types").PaginationUpdateEvent) => any;
     pageChange: (value: import("../types").PaginationUpdateEvent) => any;
 }, string, import("vue").PublicProps, Readonly<PPaginationProps> & Readonly<{
@@ -59,4 +59,5 @@ declare const _default: import("vue").DefineComponent<PPaginationProps, void, {}
     showLastPage: boolean;
     totalItemsCount: number;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

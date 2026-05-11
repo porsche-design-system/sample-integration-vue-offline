@@ -1,34 +1,44 @@
-import { defineComponent as l, ref as f, inject as u, onMounted as i, onUpdated as h, watch as C, openBlock as g, createBlock as _, resolveDynamicComponent as y, unref as k, withCtx as v, renderSlot as R } from "vue";
-import { usePrefix as b, themeInjectionKey as w, addEventListenerToElementRef as s, syncProperties as a } from "../../utils.mjs";
-const j = /* @__PURE__ */ l({
+import { defineComponent as f, ref as m, inject as c, onMounted as i, onUpdated as h, watch as g, createBlock as C, openBlock as y, resolveDynamicComponent as b, unref as v, withCtx as B, renderSlot as _ } from "vue";
+import { usePrefix as k, themeInjectionKey as R, syncProperties as s, addEventListenerToElementRef as n } from "../../utils.mjs";
+const P = /* @__PURE__ */ f({
   __name: "SegmentedControlWrapper",
   props: {
     backgroundColor: {},
     columns: { default: "auto" },
+    compact: { type: Boolean, default: !1 },
+    description: { default: "" },
     disabled: { type: Boolean, default: !1 },
     form: {},
+    hideLabel: { type: [Boolean, Object], default: !1 },
+    label: { default: "" },
+    message: { default: "" },
     name: {},
+    noWrap: { type: Boolean, default: !1 },
+    required: { type: Boolean, default: !1 },
+    state: { default: "none" },
     theme: {},
     value: {}
   },
-  emits: ["segmentedControlChange", "update"],
-  setup(p, { emit: d }) {
-    const c = b("p-segmented-control"), t = p, e = f(), n = d, r = u(w), m = () => a(e, { ...t, theme: t.theme || r.value });
+  emits: ["update:value", "blur", "change", "segmentedControlChange", "update"],
+  setup(d, { emit: p }) {
+    const u = k("p-segmented-control"), a = d, e = m(), t = p, l = c(R), r = () => s(e, { ...a, theme: a.theme || l.value });
     return i(() => {
-      m(), s(e, "segmentedControlChange", n), s(e, "update", n);
-    }), h(m), C(r, (o) => {
-      a(e, { theme: t.theme || o });
-    }), (o, x) => (g(), _(y(k(c)), {
+      r(), n(e, "blur", t), n(e, "change", t, (o) => {
+        t("update:value", o.target.value);
+      }), n(e, "segmentedControlChange", t), n(e, "update", t);
+    }), h(r), g(l, (o) => {
+      s(e, { theme: a.theme || o });
+    }), (o, j) => (y(), C(b(v(u)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {
-      default: v(() => [
-        R(o.$slots, "default")
+      default: B(() => [
+        _(o.$slots, "default")
       ]),
       _: 3
     }, 512));
   }
 });
 export {
-  j as default
+  P as default
 };

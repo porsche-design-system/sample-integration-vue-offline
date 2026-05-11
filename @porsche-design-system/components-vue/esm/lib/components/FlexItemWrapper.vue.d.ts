@@ -29,7 +29,7 @@ declare var __VLS_8: {};
 type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_8) => any;
 };
-declare const __VLS_component: import("vue").DefineComponent<PFlexItemProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PFlexItemProps> & Readonly<{}>, {
+declare const __VLS_base: import("vue").DefineComponent<PFlexItemProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PFlexItemProps> & Readonly<{}>, {
     width: BreakpointCustomizable<FlexItemWidth>;
     alignSelf: BreakpointCustomizable<FlexItemAlignSelf>;
     flex: BreakpointCustomizable<FlexItemFlex>;
@@ -37,8 +37,9 @@ declare const __VLS_component: import("vue").DefineComponent<PFlexItemProps, voi
     offset: BreakpointCustomizable<FlexItemOffset>;
     shrink: BreakpointCustomizable<FlexItemShrink>;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
 /** @deprecated since v3.0.0, will be removed with next major release. Use native CSS Flex instead. */
-declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
+declare const _default: typeof __VLS_export;
 export default _default;
 type __VLS_WithSlots<T, S> = T & {
     new (): {

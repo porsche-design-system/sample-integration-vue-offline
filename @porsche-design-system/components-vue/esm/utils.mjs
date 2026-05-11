@@ -1,18 +1,18 @@
-import { inject as o } from "vue";
-const r = Symbol("pdsPrefix"), a = Symbol("pdsTheme"), i = (t) => {
-  const e = o(r);
+import { inject as r } from "vue";
+const i = Symbol("pdsPrefix"), d = Symbol("pdsTheme"), c = (t) => {
+  const e = r(i);
   if (e === void 0)
     throw new Error("It appears the <PorscheDesignSystemProvider /> is missing. Make sure to wrap your App in it.");
   return e ? e + "-" + t : t;
-}, d = (t, e) => {
+}, m = (t, e) => {
   const s = t.value;
   Object.keys(e).forEach((n) => s[n] = e[n]);
-}, m = (t, e, s) => {
-  t.value.addEventListener(e, (n) => {
-    s(e, n.detail);
+}, u = (t, e, s, n) => {
+  t.value.addEventListener(e, (o) => {
+    s(e, o.detail), n?.(o);
   });
-}, u = () => {
-  const t = i("p-toast");
+}, y = () => {
+  const t = c("p-toast");
   return {
     addMessage: (e) => {
       const s = document.body.querySelector(t);
@@ -21,10 +21,10 @@ const r = Symbol("pdsPrefix"), a = Symbol("pdsTheme"), i = (t) => {
   };
 };
 export {
-  m as addEventListenerToElementRef,
-  r as prefixInjectionKey,
-  d as syncProperties,
-  a as themeInjectionKey,
-  i as usePrefix,
-  u as useToastManager
+  u as addEventListenerToElementRef,
+  i as prefixInjectionKey,
+  m as syncProperties,
+  d as themeInjectionKey,
+  c as usePrefix,
+  y as useToastManager
 };

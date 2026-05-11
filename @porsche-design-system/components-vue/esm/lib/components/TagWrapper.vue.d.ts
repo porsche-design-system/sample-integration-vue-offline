@@ -1,7 +1,7 @@
-import type { TagColor, TagIcon, Theme } from '../types';
+import type { TagColor, TagIcon, Theme, TagVariant } from '../types';
 type PTagProps = {
     /**
-     * Background color variations depending on theme property.
+     * @deprecated since v3.33.0, will be removed with next major release. Use `variant` prop instead. Background color variations depending on theme property.
      */
     color?: TagColor;
     /**
@@ -20,16 +20,21 @@ type PTagProps = {
      * Adapts the tag color depending on the theme.
      */
     theme?: Theme;
+    /**
+     * Background color variations.
+     */
+    variant?: TagVariant;
 };
 declare var __VLS_8: {};
 type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_8) => any;
 };
-declare const __VLS_component: import("vue").DefineComponent<PTagProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PTagProps> & Readonly<{}>, {
+declare const __VLS_base: import("vue").DefineComponent<PTagProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PTagProps> & Readonly<{}>, {
     compact: boolean;
     color: TagColor;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
-declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
+declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
+declare const _default: typeof __VLS_export;
 export default _default;
 type __VLS_WithSlots<T, S> = T & {
     new (): {

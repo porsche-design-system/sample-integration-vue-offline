@@ -1,4 +1,4 @@
-import { defineComponent as s, ref as a, onMounted as c, onUpdated as l, openBlock as f, createBlock as m, resolveDynamicComponent as d, unref as i, withCtx as u, renderSlot as C } from "vue";
+import { defineComponent as s, ref as a, onMounted as c, onUpdated as l, createBlock as f, openBlock as m, resolveDynamicComponent as d, unref as i, withCtx as u, renderSlot as C } from "vue";
 import { usePrefix as _, syncProperties as y } from "../../utils.mjs";
 const x = /* @__PURE__ */ s({
   __name: "SegmentedControlItemWrapper",
@@ -12,7 +12,7 @@ const x = /* @__PURE__ */ s({
   },
   setup(n) {
     const t = _("p-segmented-control-item"), r = n, e = a(), o = () => y(e, r);
-    return c(o), l(o), (p, b) => (f(), m(d(i(t)), {
+    return c(o), l(o), (p, b) => (m(), f(d(i(t)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

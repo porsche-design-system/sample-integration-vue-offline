@@ -5,7 +5,7 @@ type PCheckboxProps = {
      */
     checked?: boolean;
     /**
-     * Displays as compact version.
+     * Displays as a compact version.
      */
     compact?: boolean;
     /**
@@ -17,7 +17,7 @@ type PCheckboxProps = {
      */
     form?: string;
     /**
-     * Show or hide label. For better accessibility it's recommended to show the label.
+     * Show or hide label. For better accessibility, it's recommended to show the label.
      */
     hideLabel?: BreakpointCustomizable<boolean>;
     /**
@@ -61,12 +61,16 @@ declare var __VLS_8: {};
 type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_8) => any;
 };
-declare const __VLS_component: import("vue").DefineComponent<PCheckboxProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
+declare const __VLS_base: import("vue").DefineComponent<PCheckboxProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
     blur: (value: Event) => any;
+    change: (value: Event) => any;
     update: (value: CheckboxUpdateEventDetail) => any;
+    "update:checked": (value: boolean) => any;
 }, string, import("vue").PublicProps, Readonly<PCheckboxProps> & Readonly<{
     onBlur?: ((value: Event) => any) | undefined;
+    onChange?: ((value: Event) => any) | undefined;
     onUpdate?: ((value: CheckboxUpdateEventDetail) => any) | undefined;
+    "onUpdate:checked"?: ((value: boolean) => any) | undefined;
 }>, {
     label: string;
     compact: boolean;
@@ -81,7 +85,8 @@ declare const __VLS_component: import("vue").DefineComponent<PCheckboxProps, voi
     indeterminate: boolean;
     message: string;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
-declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
+declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
+declare const _default: typeof __VLS_export;
 export default _default;
 type __VLS_WithSlots<T, S> = T & {
     new (): {

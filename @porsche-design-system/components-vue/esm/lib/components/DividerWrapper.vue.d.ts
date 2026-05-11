@@ -17,8 +17,9 @@ type PDividerProps = {
      */
     theme?: Theme;
 };
-declare const _default: import("vue").DefineComponent<PDividerProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PDividerProps> & Readonly<{}>, {
+declare const __VLS_export: import("vue").DefineComponent<PDividerProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PDividerProps> & Readonly<{}>, {
     direction: BreakpointCustomizable<DividerDirection>;
     color: DividerColor;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

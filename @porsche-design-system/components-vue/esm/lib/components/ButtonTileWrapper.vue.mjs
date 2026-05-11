@@ -1,5 +1,5 @@
-import { defineComponent as r, ref as d, onMounted as p, onUpdated as s, openBlock as f, createBlock as u, resolveDynamicComponent as i, unref as c, withCtx as m, renderSlot as b } from "vue";
-import { usePrefix as y, syncProperties as _ } from "../../utils.mjs";
+import { defineComponent as r, ref as d, onMounted as p, onUpdated as s, createBlock as f, openBlock as u, resolveDynamicComponent as i, unref as c, withCtx as m, renderSlot as b } from "vue";
+import { usePrefix as y, syncProperties as B } from "../../utils.mjs";
 const k = /* @__PURE__ */ r({
   __name: "ButtonTileWrapper",
   props: {
@@ -7,7 +7,7 @@ const k = /* @__PURE__ */ r({
     aria: {},
     aspectRatio: { default: "4/3" },
     background: { default: "dark" },
-    compact: { default: !1 },
+    compact: { type: [Boolean, Object], default: !1 },
     description: {},
     disabled: { type: Boolean, default: !1 },
     gradient: { type: Boolean, default: !0 },
@@ -20,8 +20,8 @@ const k = /* @__PURE__ */ r({
     weight: { default: "semi-bold" }
   },
   setup(o) {
-    const n = y("p-button-tile"), a = o, e = d(), t = () => _(e, a);
-    return p(t), s(t), (l, g) => (f(), u(i(c(n)), {
+    const n = y("p-button-tile"), a = o, e = d(), t = () => B(e, a);
+    return p(t), s(t), (l, _) => (u(), f(i(c(n)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

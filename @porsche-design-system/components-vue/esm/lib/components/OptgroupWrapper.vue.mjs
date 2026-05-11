@@ -1,4 +1,4 @@
-import { defineComponent as s, ref as a, onMounted as f, onUpdated as c, openBlock as l, createBlock as d, resolveDynamicComponent as m, unref as u, withCtx as i, renderSlot as _ } from "vue";
+import { defineComponent as s, ref as a, onMounted as f, onUpdated as c, createBlock as l, openBlock as d, resolveDynamicComponent as m, unref as u, withCtx as i, renderSlot as _ } from "vue";
 import { usePrefix as C, syncProperties as y } from "../../utils.mjs";
 const x = /* @__PURE__ */ s({
   __name: "OptgroupWrapper",
@@ -8,7 +8,7 @@ const x = /* @__PURE__ */ s({
   },
   setup(t) {
     const n = C("p-optgroup"), p = t, e = a(), o = () => y(e, p);
-    return f(o), c(o), (r, b) => (l(), d(m(u(n)), {
+    return f(o), c(o), (r, b) => (d(), l(m(u(n)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

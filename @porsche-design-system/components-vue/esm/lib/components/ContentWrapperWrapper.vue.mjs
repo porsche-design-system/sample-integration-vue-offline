@@ -1,4 +1,4 @@
-import { defineComponent as c, ref as m, inject as f, onMounted as d, onUpdated as u, watch as l, openBlock as h, createBlock as i, resolveDynamicComponent as C, unref as _, withCtx as w, renderSlot as y } from "vue";
+import { defineComponent as c, ref as m, inject as f, onMounted as d, onUpdated as u, watch as l, createBlock as h, openBlock as i, resolveDynamicComponent as C, unref as _, withCtx as w, renderSlot as y } from "vue";
 import { usePrefix as k, themeInjectionKey as x, syncProperties as p } from "../../utils.mjs";
 const g = /* @__PURE__ */ c({
   __name: "ContentWrapperWrapper",
@@ -11,7 +11,7 @@ const g = /* @__PURE__ */ c({
     const a = k("p-content-wrapper"), e = s, t = m(), o = f(x), r = () => p(t, { ...e, theme: e.theme || o.value });
     return d(r), u(r), l(o, (n) => {
       p(t, { theme: e.theme || n });
-    }), (n, P) => (h(), i(C(_(a)), {
+    }), (n, P) => (i(), h(C(_(a)), {
       ref_key: "pdsComponentRef",
       ref: t
     }, {

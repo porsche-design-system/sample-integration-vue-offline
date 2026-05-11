@@ -1,13 +1,13 @@
-import { defineComponent as m, ref as u, inject as c, onMounted as i, onUpdated as h, watch as y, openBlock as b, createBlock as B, resolveDynamicComponent as C, unref as _, withCtx as k, renderSlot as x } from "vue";
-import { usePrefix as v, themeInjectionKey as R, addEventListenerToElementRef as f, syncProperties as s } from "../../utils.mjs";
-const j = /* @__PURE__ */ m({
+import { defineComponent as r, ref as u, inject as m, onMounted as i, onUpdated as h, watch as y, createBlock as b, openBlock as k, resolveDynamicComponent as B, unref as C, withCtx as _, renderSlot as g } from "vue";
+import { usePrefix as x, themeInjectionKey as v, syncProperties as f, addEventListenerToElementRef as n } from "../../utils.mjs";
+const P = /* @__PURE__ */ r({
   __name: "CheckboxWrapper",
   props: {
     checked: { type: Boolean, default: !1 },
     compact: { type: Boolean, default: !1 },
     disabled: { type: Boolean, default: !1 },
     form: {},
-    hideLabel: { default: !1 },
+    hideLabel: { type: [Boolean, Object], default: !1 },
     indeterminate: { type: Boolean, default: !1 },
     label: { default: "" },
     loading: { type: Boolean, default: !1 },
@@ -18,24 +18,26 @@ const j = /* @__PURE__ */ m({
     theme: {},
     value: { default: "on" }
   },
-  emits: ["blur", "update"],
-  setup(d, { emit: r }) {
-    const p = v("p-checkbox"), t = d, e = u(), a = r, n = c(R), l = () => s(e, { ...t, theme: t.theme || n.value });
+  emits: ["update:checked", "blur", "change", "update"],
+  setup(c, { emit: s }) {
+    const p = x("p-checkbox"), o = c, e = u(), a = s, l = m(v), d = () => f(e, { ...o, theme: o.theme || l.value });
     return i(() => {
-      l(), f(e, "blur", a), f(e, "update", a);
-    }), h(l), y(n, (o) => {
-      s(e, { theme: t.theme || o });
-    }), (o, g) => (b(), B(C(_(p)), {
+      d(), n(e, "blur", a), n(e, "change", a, (t) => {
+        a("update:checked", t.target.checked);
+      }), n(e, "update", a);
+    }), h(d), y(l, (t) => {
+      f(e, { theme: o.theme || t });
+    }), (t, R) => (k(), b(B(C(p)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {
-      default: k(() => [
-        x(o.$slots, "default")
+      default: _(() => [
+        g(t.$slots, "default")
       ]),
       _: 3
     }, 512));
   }
 });
 export {
-  j as default
+  P as default
 };

@@ -1,4 +1,4 @@
-import { defineComponent as l, ref as f, inject as m, onMounted as c, onUpdated as u, watch as d, openBlock as i, createBlock as h, resolveDynamicComponent as y, unref as _, withCtx as C, renderSlot as g } from "vue";
+import { defineComponent as l, ref as f, inject as m, onMounted as c, onUpdated as u, watch as d, createBlock as i, openBlock as h, resolveDynamicComponent as y, unref as _, withCtx as C, renderSlot as g } from "vue";
 import { usePrefix as x, themeInjectionKey as w, syncProperties as a } from "../../utils.mjs";
 const R = /* @__PURE__ */ l({
   __name: "TextWrapper",
@@ -15,7 +15,7 @@ const R = /* @__PURE__ */ l({
     const p = x("p-text"), e = s, t = f(), n = m(w), r = () => a(t, { ...e, theme: e.theme || n.value });
     return c(r), u(r), d(n, (o) => {
       a(t, { theme: e.theme || o });
-    }), (o, k) => (i(), h(y(_(p)), {
+    }), (o, k) => (h(), i(y(_(p)), {
       ref_key: "pdsComponentRef",
       ref: t
     }, {

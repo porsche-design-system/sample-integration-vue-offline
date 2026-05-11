@@ -1,5 +1,5 @@
-import { defineComponent as l, ref as c, inject as f, onMounted as u, onUpdated as h, watch as y, openBlock as B, createBlock as C, resolveDynamicComponent as _, unref as E, withCtx as k, renderSlot as b } from "vue";
-import { usePrefix as R, themeInjectionKey as v, addEventListenerToElementRef as s, syncProperties as r } from "../../utils.mjs";
+import { defineComponent as l, ref as c, inject as f, onMounted as u, onUpdated as h, watch as y, createBlock as B, openBlock as C, resolveDynamicComponent as _, unref as E, withCtx as k, renderSlot as b } from "vue";
+import { usePrefix as R, themeInjectionKey as v, syncProperties as r, addEventListenerToElementRef as s } from "../../utils.mjs";
 const j = /* @__PURE__ */ l({
   __name: "SheetWrapper",
   props: {
@@ -16,7 +16,7 @@ const j = /* @__PURE__ */ l({
       m(), s(e, "dismiss", o), s(e, "motionHiddenEnd", o), s(e, "motionVisibleEnd", o);
     }), h(m), y(i, (n) => {
       r(e, { theme: t.theme || n });
-    }), (n, w) => (B(), C(_(E(p)), {
+    }), (n, w) => (C(), B(_(E(p)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

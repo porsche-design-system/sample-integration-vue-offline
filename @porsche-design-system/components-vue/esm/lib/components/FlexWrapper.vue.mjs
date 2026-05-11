@@ -1,4 +1,4 @@
-import { defineComponent as a, ref as f, onMounted as p, onUpdated as l, openBlock as c, createBlock as d, resolveDynamicComponent as u, unref as i, withCtx as m, renderSlot as C } from "vue";
+import { defineComponent as a, ref as p, onMounted as f, onUpdated as l, createBlock as c, openBlock as d, resolveDynamicComponent as u, unref as i, withCtx as m, renderSlot as C } from "vue";
 import { usePrefix as _, syncProperties as x } from "../../utils.mjs";
 const g = /* @__PURE__ */ a({
   __name: "FlexWrapper",
@@ -6,13 +6,13 @@ const g = /* @__PURE__ */ a({
     alignContent: { default: "stretch" },
     alignItems: { default: "stretch" },
     direction: { default: "row" },
-    inline: { default: !1 },
+    inline: { type: [Boolean, Object], default: !1 },
     justifyContent: { default: "flex-start" },
     wrap: { default: "nowrap" }
   },
   setup(n) {
-    const o = _("p-flex"), r = n, e = f(), t = () => x(e, r);
-    return p(t), l(t), (s, w) => (c(), d(u(i(o)), {
+    const o = _("p-flex"), r = n, e = p(), t = () => x(e, r);
+    return f(t), l(t), (s, y) => (d(), c(u(i(o)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

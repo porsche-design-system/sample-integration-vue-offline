@@ -1,4 +1,4 @@
-import { defineComponent as a, ref as p, onMounted as s, onUpdated as l, openBlock as d, createBlock as u, resolveDynamicComponent as i, unref as c, withCtx as m, renderSlot as _ } from "vue";
+import { defineComponent as a, ref as p, onMounted as s, onUpdated as l, createBlock as d, openBlock as u, resolveDynamicComponent as i, unref as c, withCtx as m, renderSlot as _ } from "vue";
 import { usePrefix as x, syncProperties as C } from "../../utils.mjs";
 const y = /* @__PURE__ */ a({
   __name: "FlexItemWrapper",
@@ -12,7 +12,7 @@ const y = /* @__PURE__ */ a({
   },
   setup(o) {
     const n = x("p-flex-item"), r = o, e = p(), t = () => C(e, r);
-    return s(t), l(t), (f, h) => (d(), u(i(c(n)), {
+    return s(t), l(t), (f, h) => (u(), d(i(c(n)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

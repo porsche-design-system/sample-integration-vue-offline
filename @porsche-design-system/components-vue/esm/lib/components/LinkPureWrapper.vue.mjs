@@ -1,29 +1,29 @@
-import { defineComponent as s, ref as p, inject as d, onMounted as u, onUpdated as c, watch as i, openBlock as m, createBlock as h, resolveDynamicComponent as _, unref as y, withCtx as g, renderSlot as w } from "vue";
-import { usePrefix as C, themeInjectionKey as k, syncProperties as r } from "../../utils.mjs";
-const v = /* @__PURE__ */ s({
+import { defineComponent as s, ref as p, inject as c, onMounted as d, onUpdated as u, watch as i, createBlock as m, openBlock as h, resolveDynamicComponent as y, unref as _, withCtx as g, renderSlot as w } from "vue";
+import { usePrefix as B, themeInjectionKey as C, syncProperties as r } from "../../utils.mjs";
+const P = /* @__PURE__ */ s({
   __name: "LinkPureWrapper",
   props: {
     active: { type: Boolean, default: !1 },
     alignLabel: { default: "end" },
     aria: {},
     download: {},
-    hideLabel: { default: !1 },
+    hideLabel: { type: [Boolean, Object], default: !1 },
     href: {},
     icon: { default: "arrow-right" },
     iconSource: {},
     rel: {},
     size: { default: "small" },
-    stretch: { default: !1 },
+    stretch: { type: [Boolean, Object], default: !1 },
     target: { default: "_self" },
     theme: {},
     underline: { type: Boolean, default: !1 },
     weight: { default: "regular" }
   },
   setup(l) {
-    const f = C("p-link-pure"), e = l, t = p(), n = d(k), a = () => r(t, { ...e, theme: e.theme || n.value });
-    return u(a), c(a), i(n, (o) => {
+    const f = B("p-link-pure"), e = l, t = p(), n = c(C), a = () => r(t, { ...e, theme: e.theme || n.value });
+    return d(a), u(a), i(n, (o) => {
       r(t, { theme: e.theme || o });
-    }), (o, B) => (m(), h(_(y(f)), {
+    }), (o, b) => (h(), m(y(_(f)), {
       ref_key: "pdsComponentRef",
       ref: t
     }, {
@@ -35,5 +35,5 @@ const v = /* @__PURE__ */ s({
   }
 });
 export {
-  v as default
+  P as default
 };

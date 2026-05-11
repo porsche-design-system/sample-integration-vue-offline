@@ -1,4 +1,4 @@
-import { defineComponent as s, ref as a, onMounted as l, onUpdated as c, openBlock as f, createBlock as d, resolveDynamicComponent as i, unref as m, withCtx as u, renderSlot as _ } from "vue";
+import { defineComponent as s, ref as a, onMounted as l, onUpdated as c, createBlock as f, openBlock as d, resolveDynamicComponent as i, unref as m, withCtx as u, renderSlot as _ } from "vue";
 import { usePrefix as C, syncProperties as y } from "../../utils.mjs";
 const P = /* @__PURE__ */ s({
   __name: "MultiSelectOptionWrapper",
@@ -8,7 +8,7 @@ const P = /* @__PURE__ */ s({
   },
   setup(t) {
     const n = C("p-multi-select-option"), p = t, e = a(), o = () => y(e, p);
-    return l(o), c(o), (r, k) => (f(), d(i(m(n)), {
+    return l(o), c(o), (r, k) => (d(), f(i(m(n)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

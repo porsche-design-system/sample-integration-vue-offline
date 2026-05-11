@@ -1,6 +1,6 @@
-import { defineComponent as u, ref as c, inject as m, onMounted as i, onUpdated as h, watch as y, openBlock as B, createBlock as C, resolveDynamicComponent as _, unref as b, withCtx as g, renderSlot as v } from "vue";
-import { usePrefix as R, themeInjectionKey as k, addEventListenerToElementRef as n, syncProperties as r } from "../../utils.mjs";
-const j = /* @__PURE__ */ u({
+import { defineComponent as d, ref as c, inject as m, onMounted as i, onUpdated as h, watch as y, createBlock as B, openBlock as g, resolveDynamicComponent as b, unref as v, withCtx as C, renderSlot as _ } from "vue";
+import { usePrefix as x, themeInjectionKey as L, syncProperties as f, addEventListenerToElementRef as n } from "../../utils.mjs";
+const w = /* @__PURE__ */ d({
   __name: "InputSearchWrapper",
   props: {
     autoComplete: {},
@@ -9,11 +9,13 @@ const j = /* @__PURE__ */ u({
     description: { default: "" },
     disabled: { type: Boolean, default: !1 },
     form: {},
-    hideLabel: { default: !1 },
+    hideLabel: { type: [Boolean, Object], default: !1 },
     indicator: { type: Boolean, default: !1 },
     label: { default: "" },
     loading: { type: Boolean, default: !1 },
+    maxLength: {},
     message: { default: "" },
+    minLength: {},
     name: {},
     placeholder: { default: "" },
     readOnly: { type: Boolean, default: !1 },
@@ -22,24 +24,26 @@ const j = /* @__PURE__ */ u({
     theme: {},
     value: { default: "" }
   },
-  emits: ["blur", "change", "input"],
-  setup(s, { emit: p }) {
-    const d = R("p-input-search"), t = s, e = c(), a = p, l = m(k), f = () => r(e, { ...t, theme: t.theme || l.value });
+  emits: ["update:value", "blur", "change", "input"],
+  setup(r, { emit: s }) {
+    const u = x("p-input-search"), o = r, e = c(), a = s, l = m(L), p = () => f(e, { ...o, theme: o.theme || l.value });
     return i(() => {
-      f(), n(e, "blur", a), n(e, "change", a), n(e, "input", a);
-    }), h(f), y(l, (o) => {
-      r(e, { theme: t.theme || o });
-    }), (o, w) => (B(), C(_(b(d)), {
+      p(), n(e, "blur", a), n(e, "change", a), n(e, "input", a, (t) => {
+        a("update:value", t.target.value);
+      });
+    }), h(p), y(l, (t) => {
+      f(e, { theme: o.theme || t });
+    }), (t, R) => (g(), B(b(v(u)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {
-      default: g(() => [
-        v(o.$slots, "default")
+      default: C(() => [
+        _(t.$slots, "default")
       ]),
       _: 3
     }, 512));
   }
 });
 export {
-  j as default
+  w as default
 };

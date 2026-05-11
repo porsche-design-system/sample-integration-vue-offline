@@ -1,19 +1,20 @@
-import { defineComponent as s, ref as m, inject as f, onMounted as u, onUpdated as l, watch as d, openBlock as i, createBlock as h, resolveDynamicComponent as _, unref as y, withCtx as C, renderSlot as g } from "vue";
-import { usePrefix as k, themeInjectionKey as w, syncProperties as c } from "../../utils.mjs";
-const R = /* @__PURE__ */ s({
+import { defineComponent as s, ref as m, inject as f, onMounted as u, onUpdated as l, watch as d, createBlock as i, openBlock as h, resolveDynamicComponent as _, unref as y, withCtx as C, renderSlot as g } from "vue";
+import { usePrefix as k, themeInjectionKey as v, syncProperties as c } from "../../utils.mjs";
+const P = /* @__PURE__ */ s({
   __name: "TagWrapper",
   props: {
     color: { default: "background-surface" },
     compact: { type: Boolean, default: !1 },
     icon: {},
     iconSource: {},
-    theme: {}
+    theme: {},
+    variant: {}
   },
-  setup(p) {
-    const a = k("p-tag"), e = p, o = m(), n = f(w), r = () => c(o, { ...e, theme: e.theme || n.value });
+  setup(a) {
+    const p = k("p-tag"), e = a, o = m(), n = f(v), r = () => c(o, { ...e, theme: e.theme || n.value });
     return u(r), l(r), d(n, (t) => {
       c(o, { theme: e.theme || t });
-    }), (t, x) => (i(), h(_(y(a)), {
+    }), (t, w) => (h(), i(_(y(p)), {
       ref_key: "pdsComponentRef",
       ref: o
     }, {
@@ -25,5 +26,5 @@ const R = /* @__PURE__ */ s({
   }
 });
 export {
-  R as default
+  P as default
 };

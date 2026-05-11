@@ -1,6 +1,6 @@
-import { defineComponent as d, ref as u, inject as i, onMounted as c, onUpdated as h, watch as y, openBlock as B, createBlock as C, resolveDynamicComponent as _, unref as b, withCtx as g, renderSlot as v } from "vue";
-import { usePrefix as x, themeInjectionKey as R, addEventListenerToElementRef as a, syncProperties as f } from "../../utils.mjs";
-const T = /* @__PURE__ */ d({
+import { defineComponent as d, ref as m, inject as i, onMounted as c, onUpdated as h, watch as y, createBlock as B, openBlock as b, resolveDynamicComponent as v, unref as C, withCtx as _, renderSlot as g } from "vue";
+import { usePrefix as x, themeInjectionKey as R, syncProperties as s, addEventListenerToElementRef as o } from "../../utils.mjs";
+const P = /* @__PURE__ */ d({
   __name: "InputTimeWrapper",
   props: {
     autoComplete: {},
@@ -8,7 +8,7 @@ const T = /* @__PURE__ */ d({
     description: { default: "" },
     disabled: { type: Boolean, default: !1 },
     form: {},
-    hideLabel: { default: !1 },
+    hideLabel: { type: [Boolean, Object], default: !1 },
     label: { default: "" },
     loading: { type: Boolean, default: !1 },
     max: {},
@@ -22,24 +22,26 @@ const T = /* @__PURE__ */ d({
     theme: {},
     value: { default: "" }
   },
-  emits: ["blur", "change", "input"],
-  setup(p, { emit: r }) {
-    const m = x("p-input-time"), t = p, e = u(), n = r, l = i(R), s = () => f(e, { ...t, theme: t.theme || l.value });
+  emits: ["update:value", "blur", "change", "input"],
+  setup(u, { emit: f }) {
+    const r = x("p-input-time"), n = u, e = m(), a = f, l = i(R), p = () => s(e, { ...n, theme: n.theme || l.value });
     return c(() => {
-      s(), a(e, "blur", n), a(e, "change", n), a(e, "input", n);
-    }), h(s), y(l, (o) => {
-      f(e, { theme: t.theme || o });
-    }), (o, k) => (B(), C(_(b(m)), {
+      p(), o(e, "blur", a), o(e, "change", a), o(e, "input", a, (t) => {
+        a("update:value", t.target.value);
+      });
+    }), h(p), y(l, (t) => {
+      s(e, { theme: n.theme || t });
+    }), (t, j) => (b(), B(v(C(r)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {
-      default: g(() => [
-        v(o.$slots, "default")
+      default: _(() => [
+        g(t.$slots, "default")
       ]),
       _: 3
     }, 512));
   }
 });
 export {
-  T as default
+  P as default
 };

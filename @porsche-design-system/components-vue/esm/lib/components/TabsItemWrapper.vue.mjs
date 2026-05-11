@@ -1,4 +1,4 @@
-import { defineComponent as s, ref as a, onMounted as c, onUpdated as f, openBlock as m, createBlock as d, resolveDynamicComponent as l, unref as i, withCtx as u, renderSlot as _ } from "vue";
+import { defineComponent as s, ref as a, onMounted as c, onUpdated as f, createBlock as m, openBlock as d, resolveDynamicComponent as l, unref as i, withCtx as u, renderSlot as _ } from "vue";
 import { usePrefix as C, syncProperties as b } from "../../utils.mjs";
 const P = /* @__PURE__ */ s({
   __name: "TabsItemWrapper",
@@ -7,7 +7,7 @@ const P = /* @__PURE__ */ s({
   },
   setup(t) {
     const n = C("p-tabs-item"), r = t, e = a(), o = () => b(e, r);
-    return c(o), f(o), (p, y) => (m(), d(l(i(n)), {
+    return c(o), f(o), (p, y) => (d(), m(l(i(n)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

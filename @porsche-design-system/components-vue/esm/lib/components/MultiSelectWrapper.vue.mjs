@@ -1,6 +1,6 @@
-import { defineComponent as p, ref as m, inject as u, onMounted as c, onUpdated as i, watch as h, openBlock as y, createBlock as _, resolveDynamicComponent as C, unref as B, withCtx as b, renderSlot as v } from "vue";
-import { usePrefix as w, themeInjectionKey as R, addEventListenerToElementRef as k, syncProperties as l } from "../../utils.mjs";
-const j = /* @__PURE__ */ p({
+import { defineComponent as f, ref as c, inject as m, onMounted as i, onUpdated as h, watch as g, createBlock as y, openBlock as b, resolveDynamicComponent as v, unref as _, withCtx as B, renderSlot as C } from "vue";
+import { usePrefix as w, themeInjectionKey as R, syncProperties as s, addEventListenerToElementRef as a } from "../../utils.mjs";
+const P = /* @__PURE__ */ f({
   __name: "MultiSelectWrapper",
   props: {
     compact: { type: Boolean, default: !1 },
@@ -8,7 +8,7 @@ const j = /* @__PURE__ */ p({
     disabled: { type: Boolean, default: !1 },
     dropdownDirection: { default: "auto" },
     form: {},
-    hideLabel: { default: !1 },
+    hideLabel: { type: [Boolean, Object], default: !1 },
     label: { default: "" },
     message: { default: "" },
     name: {},
@@ -17,24 +17,26 @@ const j = /* @__PURE__ */ p({
     theme: {},
     value: { default: () => [] }
   },
-  emits: ["update"],
-  setup(s, { emit: r }) {
-    const d = w("p-multi-select"), t = s, e = m(), f = r, n = u(R), a = () => l(e, { ...t, theme: t.theme || n.value });
-    return c(() => {
-      a(), k(e, "update", f);
-    }), i(a), h(n, (o) => {
-      l(e, { theme: t.theme || o });
-    }), (o, x) => (y(), _(C(B(d)), {
+  emits: ["update:value", "blur", "change", "toggle", "update"],
+  setup(u, { emit: d }) {
+    const p = w("p-multi-select"), n = u, e = c(), t = d, l = m(R), r = () => s(e, { ...n, theme: n.theme || l.value });
+    return i(() => {
+      r(), a(e, "blur", t), a(e, "change", t, (o) => {
+        t("update:value", o.target.value);
+      }), a(e, "toggle", t), a(e, "update", t);
+    }), h(r), g(l, (o) => {
+      s(e, { theme: n.theme || o });
+    }), (o, j) => (b(), y(v(_(p)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {
-      default: b(() => [
-        v(o.$slots, "default")
+      default: B(() => [
+        C(o.$slots, "default")
       ]),
       _: 3
     }, 512));
   }
 });
 export {
-  j as default
+  P as default
 };

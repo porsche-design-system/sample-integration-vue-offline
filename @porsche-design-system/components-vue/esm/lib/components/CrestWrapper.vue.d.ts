@@ -13,7 +13,8 @@ type PCrestProps = {
      */
     target?: CrestTarget;
 };
-declare const _default: import("vue").DefineComponent<PCrestProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PCrestProps> & Readonly<{}>, {
+declare const __VLS_export: import("vue").DefineComponent<PCrestProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PCrestProps> & Readonly<{}>, {
     target: CrestTarget;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

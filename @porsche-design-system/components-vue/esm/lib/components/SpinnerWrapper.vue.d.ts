@@ -13,7 +13,8 @@ type PSpinnerProps = {
      */
     theme?: Theme;
 };
-declare const _default: import("vue").DefineComponent<PSpinnerProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PSpinnerProps> & Readonly<{}>, {
+declare const __VLS_export: import("vue").DefineComponent<PSpinnerProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PSpinnerProps> & Readonly<{}>, {
     size: BreakpointCustomizable<SpinnerSize>;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

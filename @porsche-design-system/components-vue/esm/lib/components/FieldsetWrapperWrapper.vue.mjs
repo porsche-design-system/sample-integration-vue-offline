@@ -1,4 +1,4 @@
-import { defineComponent as f, ref as l, inject as m, onMounted as d, onUpdated as c, watch as u, openBlock as i, createBlock as h, resolveDynamicComponent as _, unref as y, withCtx as C, renderSlot as w } from "vue";
+import { defineComponent as f, ref as l, inject as m, onMounted as d, onUpdated as c, watch as u, createBlock as i, openBlock as h, resolveDynamicComponent as _, unref as y, withCtx as C, renderSlot as w } from "vue";
 import { usePrefix as b, themeInjectionKey as k, syncProperties as a } from "../../utils.mjs";
 const R = /* @__PURE__ */ f({
   __name: "FieldsetWrapperWrapper",
@@ -14,7 +14,7 @@ const R = /* @__PURE__ */ f({
     const s = b("p-fieldset-wrapper"), e = p, t = l(), n = m(k), r = () => a(t, { ...e, theme: e.theme || n.value });
     return d(r), c(r), u(n, (o) => {
       a(t, { theme: e.theme || o });
-    }), (o, x) => (i(), h(_(y(s)), {
+    }), (o, x) => (h(), i(_(y(s)), {
       ref_key: "pdsComponentRef",
       ref: t
     }, {

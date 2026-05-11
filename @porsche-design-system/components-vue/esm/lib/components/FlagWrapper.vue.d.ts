@@ -13,8 +13,9 @@ type PFlagProps = {
      */
     size?: FlagSize;
 };
-declare const _default: import("vue").DefineComponent<PFlagProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PFlagProps> & Readonly<{}>, {
+declare const __VLS_export: import("vue").DefineComponent<PFlagProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PFlagProps> & Readonly<{}>, {
     size: FlagSize;
     name: FlagName;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

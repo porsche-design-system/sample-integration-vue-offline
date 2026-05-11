@@ -5,6 +5,10 @@ type PTextareaProps = {
      */
     autoComplete?: string;
     /**
+     * A boolean value that, if present, renders the textarea as a compact version.
+     */
+    compact?: boolean;
+    /**
      * Show or hide the character counter.
      */
     counter?: boolean;
@@ -61,7 +65,7 @@ type PTextareaProps = {
      */
     resize?: TextareaResize;
     /**
-     * The number of rows of the textarea.
+     * The number of rows. Has no effect when field-sizing CSS Variable '--p-textarea-field-sizing' is set to 'content'.
      */
     rows?: number;
     /**
@@ -89,18 +93,22 @@ declare var __VLS_8: {};
 type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_8) => any;
 };
-declare const __VLS_component: import("vue").DefineComponent<PTextareaProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
+declare const __VLS_base: import("vue").DefineComponent<PTextareaProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
     blur: (value: Event) => any;
     change: (value: Event) => any;
     input: (value: InputEvent) => any;
+    "update:value": (value: string) => any;
 }, string, import("vue").PublicProps, Readonly<PTextareaProps> & Readonly<{
     onBlur?: ((value: Event) => any) | undefined;
     onChange?: ((value: Event) => any) | undefined;
     onInput?: ((value: InputEvent) => any) | undefined;
+    "onUpdate:value"?: ((value: string) => any) | undefined;
 }>, {
     wrap: TextareaWrap;
     resize: TextareaResize;
     label: string;
+    compact: boolean;
+    placeholder: string;
     description: string;
     state: TextareaState;
     required: boolean;
@@ -109,11 +117,11 @@ declare const __VLS_component: import("vue").DefineComponent<PTextareaProps, voi
     value: string;
     message: string;
     readOnly: boolean;
-    placeholder: string;
     counter: boolean;
     rows: number;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
-declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
+declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
+declare const _default: typeof __VLS_export;
 export default _default;
 type __VLS_WithSlots<T, S> = T & {
     new (): {

@@ -1,5 +1,5 @@
-import { defineComponent as d, ref as f, inject as c, onMounted as l, onUpdated as u, watch as h, openBlock as y, createBlock as B, resolveDynamicComponent as _, unref as C, withCtx as g, renderSlot as w } from "vue";
-import { usePrefix as R, themeInjectionKey as k, addEventListenerToElementRef as v, syncProperties as a } from "../../utils.mjs";
+import { defineComponent as d, ref as f, inject as c, onMounted as l, onUpdated as u, watch as h, createBlock as y, openBlock as B, resolveDynamicComponent as _, unref as C, withCtx as g, renderSlot as w } from "vue";
+import { usePrefix as R, themeInjectionKey as k, syncProperties as a, addEventListenerToElementRef as v } from "../../utils.mjs";
 const b = /* @__PURE__ */ d({
   __name: "BannerWrapper",
   props: {
@@ -20,7 +20,7 @@ const b = /* @__PURE__ */ d({
       s(), v(e, "dismiss", m);
     }), u(s), h(o, (n) => {
       a(e, { theme: t.theme || n });
-    }), (n, x) => (y(), B(_(C(i)), {
+    }), (n, x) => (B(), y(_(C(i)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

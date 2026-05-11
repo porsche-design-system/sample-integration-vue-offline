@@ -1,9 +1,9 @@
-import { inject as n, ref as c } from "vue";
+import { ref as n, inject as c } from "vue";
 import { componentsReady as i, load as m } from "@porsche-design-system/components-js";
 import { prefixInjectionKey as a } from "./utils.mjs";
 const t = Symbol();
 function u() {
-  const e = n(t);
+  const e = c(t);
   if (!e)
     throw new Error(
       "[Porsche Design System Vue] No plugin was provided. Make sure to create one via `createPorscheDesignSystem()`."
@@ -11,7 +11,7 @@ function u() {
   return e;
 }
 function g(e = { prefix: "" }) {
-  const r = c(!1), s = {
+  const r = n(!1), s = {
     options: e,
     isPorscheDesignSystemLoaded: r,
     componentsReady: i,

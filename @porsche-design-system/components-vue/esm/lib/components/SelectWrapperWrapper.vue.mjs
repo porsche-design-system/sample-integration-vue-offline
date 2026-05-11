@@ -1,12 +1,12 @@
-import { defineComponent as l, ref as f, inject as c, onMounted as d, onUpdated as m, watch as u, openBlock as i, createBlock as h, resolveDynamicComponent as y, unref as _, withCtx as C, renderSlot as w } from "vue";
+import { defineComponent as s, ref as f, inject as c, onMounted as d, onUpdated as m, watch as u, createBlock as i, openBlock as h, resolveDynamicComponent as y, unref as _, withCtx as C, renderSlot as w } from "vue";
 import { usePrefix as B, themeInjectionKey as b, syncProperties as r } from "../../utils.mjs";
-const P = /* @__PURE__ */ l({
+const x = /* @__PURE__ */ s({
   __name: "SelectWrapperWrapper",
   props: {
     description: { default: "" },
     dropdownDirection: { default: "auto" },
     filter: { type: Boolean, default: !1 },
-    hideLabel: { default: !1 },
+    hideLabel: { type: [Boolean, Object], default: !1 },
     label: { default: "" },
     message: { default: "" },
     native: { type: Boolean, default: !1 },
@@ -14,10 +14,10 @@ const P = /* @__PURE__ */ l({
     theme: {}
   },
   setup(p) {
-    const s = B("p-select-wrapper"), e = p, t = f(), n = c(b), a = () => r(t, { ...e, theme: e.theme || n.value });
+    const l = B("p-select-wrapper"), e = p, t = f(), n = c(b), a = () => r(t, { ...e, theme: e.theme || n.value });
     return d(a), m(a), u(n, (o) => {
       r(t, { theme: e.theme || o });
-    }), (o, k) => (i(), h(y(_(s)), {
+    }), (o, j) => (h(), i(y(_(l)), {
       ref_key: "pdsComponentRef",
       ref: t
     }, {
@@ -29,5 +29,5 @@ const P = /* @__PURE__ */ l({
   }
 });
 export {
-  P as default
+  x as default
 };

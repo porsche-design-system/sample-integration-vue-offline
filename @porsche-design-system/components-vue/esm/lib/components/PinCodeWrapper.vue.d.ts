@@ -1,6 +1,10 @@
 import type { BreakpointCustomizable, PinCodeLength, PinCodeState, Theme, PinCodeType } from '../types';
 type PPinCodeProps = {
     /**
+     * A boolean value that, if present, renders the pin-code as a compact version.
+     */
+    compact?: boolean;
+    /**
      * The description text.
      */
     description?: string;
@@ -61,14 +65,15 @@ declare var __VLS_8: {};
 type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_8) => any;
 };
-declare const __VLS_component: import("vue").DefineComponent<PPinCodeProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
-    update: (value: import("../types").PinCodeUpdateEvent) => any;
+declare const __VLS_base: import("vue").DefineComponent<PPinCodeProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
+    [x: string]: any;
 }, string, import("vue").PublicProps, Readonly<PPinCodeProps> & Readonly<{
-    onUpdate?: ((value: import("../types").PinCodeUpdateEvent) => any) | undefined;
+    [x: `on${Capitalize<any>}`]: ((...args: any) => any) | undefined;
 }>, {
     label: string;
     length: PinCodeLength;
     type: PinCodeType;
+    compact: boolean;
     description: string;
     state: PinCodeState;
     required: boolean;
@@ -78,7 +83,8 @@ declare const __VLS_component: import("vue").DefineComponent<PPinCodeProps, void
     value: string;
     message: string;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
-declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
+declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
+declare const _default: typeof __VLS_export;
 export default _default;
 type __VLS_WithSlots<T, S> = T & {
     new (): {

@@ -1,12 +1,13 @@
-import { defineComponent as p, ref as m, inject as u, onMounted as i, onUpdated as c, watch as h, openBlock as y, createBlock as C, resolveDynamicComponent as _, unref as b, withCtx as B, renderSlot as g } from "vue";
-import { usePrefix as v, themeInjectionKey as P, addEventListenerToElementRef as R, syncProperties as l } from "../../utils.mjs";
-const j = /* @__PURE__ */ p({
+import { defineComponent as u, ref as m, inject as c, onMounted as i, onUpdated as h, watch as y, createBlock as b, openBlock as g, resolveDynamicComponent as v, unref as B, withCtx as C, renderSlot as _ } from "vue";
+import { usePrefix as P, themeInjectionKey as R, syncProperties as p, addEventListenerToElementRef as n } from "../../utils.mjs";
+const x = /* @__PURE__ */ u({
   __name: "PinCodeWrapper",
   props: {
+    compact: { type: Boolean, default: !1 },
     description: { default: "" },
     disabled: { type: Boolean, default: !1 },
     form: {},
-    hideLabel: { default: !1 },
+    hideLabel: { type: [Boolean, Object], default: !1 },
     label: { default: "" },
     length: { default: 4 },
     loading: { type: Boolean, default: !1 },
@@ -18,24 +19,26 @@ const j = /* @__PURE__ */ p({
     type: { default: "number" },
     value: { default: "" }
   },
-  emits: ["update"],
-  setup(d, { emit: s }) {
-    const f = v("p-pin-code"), t = d, e = m(), r = s, o = u(P), a = () => l(e, { ...t, theme: t.theme || o.value });
+  emits: ["update:value", "blur", "change", "update"],
+  setup(f, { emit: r }) {
+    const s = P("p-pin-code"), o = f, e = m(), a = r, l = c(R), d = () => p(e, { ...o, theme: o.theme || l.value });
     return i(() => {
-      a(), R(e, "update", r);
-    }), c(a), h(o, (n) => {
-      l(e, { theme: t.theme || n });
-    }), (n, k) => (y(), C(_(b(f)), {
+      d(), n(e, "blur", a), n(e, "change", a, (t) => {
+        a("update:value", t.target.value);
+      }), n(e, "update", a);
+    }), h(d), y(l, (t) => {
+      p(e, { theme: o.theme || t });
+    }), (t, j) => (g(), b(v(B(s)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {
-      default: B(() => [
-        g(n.$slots, "default")
+      default: C(() => [
+        _(t.$slots, "default")
       ]),
       _: 3
     }, 512));
   }
 });
 export {
-  j as default
+  x as default
 };

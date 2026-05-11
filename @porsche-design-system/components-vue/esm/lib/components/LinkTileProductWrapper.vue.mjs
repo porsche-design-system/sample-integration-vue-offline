@@ -1,5 +1,5 @@
-import { defineComponent as c, ref as f, inject as m, onMounted as d, onUpdated as u, watch as h, openBlock as k, createBlock as _, resolveDynamicComponent as y, unref as C, withCtx as B, renderSlot as R } from "vue";
-import { usePrefix as g, themeInjectionKey as P, addEventListenerToElementRef as v, syncProperties as i } from "../../utils.mjs";
+import { defineComponent as c, ref as f, inject as m, onMounted as d, onUpdated as u, watch as h, createBlock as k, openBlock as _, resolveDynamicComponent as y, unref as C, withCtx as B, renderSlot as R } from "vue";
+import { usePrefix as g, themeInjectionKey as P, syncProperties as i, addEventListenerToElementRef as v } from "../../utils.mjs";
 const j = /* @__PURE__ */ c({
   __name: "LinkTileProductWrapper",
   props: {
@@ -22,7 +22,7 @@ const j = /* @__PURE__ */ c({
       r(), v(e, "like", l);
     }), u(r), h(n, (o) => {
       i(e, { theme: t.theme || o });
-    }), (o, w) => (k(), _(y(C(a)), {
+    }), (o, w) => (_(), k(y(C(a)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

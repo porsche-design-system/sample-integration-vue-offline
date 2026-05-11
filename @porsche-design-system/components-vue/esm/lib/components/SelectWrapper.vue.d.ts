@@ -1,4 +1,4 @@
-import type { SelectDropdownDirection, BreakpointCustomizable, SelectUpdateEventDetail, SelectState, Theme } from '../types';
+import type { SelectDropdownDirection, BreakpointCustomizable, SelectState, Theme } from '../types';
 type PSelectProps = {
     /**
      * Displays as compact version.
@@ -17,7 +17,7 @@ type PSelectProps = {
      */
     dropdownDirection?: SelectDropdownDirection;
     /**
-     * Shows an input in the dropdown allowing options to be filtered.
+     * Shows an input in the dropdown allowing options to be filtered. Will be ignored if the `filter` slot is used.
      */
     filter?: boolean;
     /**
@@ -61,10 +61,10 @@ declare var __VLS_8: {};
 type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_8) => any;
 };
-declare const __VLS_component: import("vue").DefineComponent<PSelectProps, void, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
-    update: (value: SelectUpdateEventDetail) => any;
+declare const __VLS_base: import("vue").DefineComponent<PSelectProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {} & {
+    [x: string]: any;
 }, string, import("vue").PublicProps, Readonly<PSelectProps> & Readonly<{
-    onUpdate?: ((value: SelectUpdateEventDetail) => any) | undefined;
+    [x: `on${Capitalize<any>}`]: ((...args: any) => any) | undefined;
 }>, {
     filter: boolean;
     label: string;
@@ -77,7 +77,8 @@ declare const __VLS_component: import("vue").DefineComponent<PSelectProps, void,
     message: string;
     dropdownDirection: SelectDropdownDirection;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
-declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
+declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
+declare const _default: typeof __VLS_export;
 export default _default;
 type __VLS_WithSlots<T, S> = T & {
     new (): {

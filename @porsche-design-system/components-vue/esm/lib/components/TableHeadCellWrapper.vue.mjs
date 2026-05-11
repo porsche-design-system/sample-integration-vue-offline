@@ -1,4 +1,4 @@
-import { defineComponent as a, ref as l, onMounted as s, onUpdated as f, openBlock as c, createBlock as d, resolveDynamicComponent as m, unref as u, withCtx as i, renderSlot as C } from "vue";
+import { defineComponent as a, ref as l, onMounted as s, onUpdated as f, createBlock as c, openBlock as d, resolveDynamicComponent as m, unref as u, withCtx as i, renderSlot as C } from "vue";
 import { usePrefix as _, syncProperties as y } from "../../utils.mjs";
 const k = /* @__PURE__ */ a({
   __name: "TableHeadCellWrapper",
@@ -9,7 +9,7 @@ const k = /* @__PURE__ */ a({
   },
   setup(t) {
     const n = _("p-table-head-cell"), r = t, e = l(), o = () => y(e, r);
-    return s(o), f(o), (p, b) => (c(), d(m(u(n)), {
+    return s(o), f(o), (p, b) => (d(), c(m(u(n)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, {

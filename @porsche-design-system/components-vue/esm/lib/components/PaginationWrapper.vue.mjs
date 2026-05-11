@@ -1,5 +1,5 @@
-import { defineComponent as c, ref as f, inject as u, onMounted as g, onUpdated as d, watch as P, openBlock as h, createBlock as y, resolveDynamicComponent as C, unref as v } from "vue";
-import { usePrefix as x, themeInjectionKey as L, addEventListenerToElementRef as r, syncProperties as l } from "../../utils.mjs";
+import { defineComponent as c, ref as f, inject as u, onMounted as g, onUpdated as d, watch as P, createBlock as h, openBlock as y, resolveDynamicComponent as C, unref as v } from "vue";
+import { usePrefix as x, themeInjectionKey as L, syncProperties as r, addEventListenerToElementRef as l } from "../../utils.mjs";
 const R = /* @__PURE__ */ c({
   __name: "PaginationWrapper",
   props: {
@@ -17,12 +17,12 @@ const R = /* @__PURE__ */ c({
   },
   emits: ["pageChange", "update"],
   setup(s, { emit: m }) {
-    const i = x("p-pagination"), t = s, e = f(), a = m, n = u(L), o = () => l(e, { ...t, theme: t.theme || n.value });
+    const i = x("p-pagination"), t = s, e = f(), a = m, n = u(L), o = () => r(e, { ...t, theme: t.theme || n.value });
     return g(() => {
-      o(), r(e, "pageChange", a), r(e, "update", a);
+      o(), l(e, "pageChange", a), l(e, "update", a);
     }), d(o), P(n, (p) => {
-      l(e, { theme: t.theme || p });
-    }), (p, _) => (h(), y(C(v(i)), {
+      r(e, { theme: t.theme || p });
+    }), (p, _) => (y(), h(C(v(i)), {
       ref_key: "pdsComponentRef",
       ref: e
     }, null, 512));
